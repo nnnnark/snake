@@ -1,5 +1,9 @@
 body{
-    background-color: #2a2a2a;
-    text-align: center;
+    /*background-color: #2a2a2a;*/
+}
+
+canvas{
     margin-top: 50px;
+    margin-left: 33%;
+    border: 30px solid #cbcbcb;
 }

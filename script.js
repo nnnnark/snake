@@ -1,5 +1,5 @@
-var blockSize = 25;
-var rows = 20;
+var blockSize = 35;
+var rows = 15;
 var cols = 15;
 var board;
 var context;
@@ -12,6 +12,7 @@ var velocityY = 0;
 
 var body = [];
 
+// const foodTexture = new Image();
 var foodX;
 var foodY;
 var score = 0;
@@ -22,6 +23,7 @@ window.onload = function () {
     board = document.getElementById('board');
     board.height = rows * blockSize;
     board.width = cols * blockSize;
+    // foodTexture.src = 'food/apelsin.png';
     context = board.getContext('2d');
     food();
     document.addEventListener('keyup', direction);
@@ -35,6 +37,7 @@ function update() {
     context.fillStyle = "white";
     context.fillRect(0, 0, board.width, board.height);
 
+    // context.drawImage(foodTexture, foodX, foodY);
     context.fillStyle = "black";
     context.fillRect(foodX, foodY, blockSize, blockSize)
 
@@ -67,7 +70,7 @@ function update() {
     for (let i = 0; i < body.length; i++) {
         if (snakeX == body[i][0] && snakeY == body[i][1]) {
             gameOver = true;
-            alert('Game over. Your score: /n' + score);
+            alert('Game over. Your score: ' + score);
         }
     }
 
