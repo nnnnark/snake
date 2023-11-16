@@ -1,23 +1,23 @@
-var blockSize = 35;
-var rows = 15;
-var cols = 15;
-var board;
-var context;
+let blockSize = 35;
+let rows = 15;
+let cols = 15;
+let board;
+let context;
 
-var snakeX = blockSize * 5;
-var snakeY = blockSize * 5;
+let snakeX = blockSize * 5;
+let snakeY = blockSize * 5;
 
-var velocityX = 0;
-var velocityY = 0;
+let velocityX = 0;
+let velocityY = 0;
 
-var body = [];
+let body = [];
 
 // const foodTexture = new Image();
-var foodX;
-var foodY;
-var score = 0;
+let foodX;
+let foodY;
+let score = 0;
 
-var gameOver = false;
+let gameOver = false;
 
 window.onload = function () {
     board = document.getElementById('board');
